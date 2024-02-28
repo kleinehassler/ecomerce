@@ -1,0 +1,8 @@
+.cartProduct {
+    display: flex;
+    align-items: center;
+}
+
+.cartProduct figure{
+    width: 75px;
+}
