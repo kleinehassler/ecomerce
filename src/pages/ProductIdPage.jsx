@@ -5,6 +5,9 @@ import SimilarItems from '../components/ProductIdPage/SimilarItems';
 import useFetch from '../hooks/useFetch.js';
 import InfoProduct from '../components/productPage/InfoProduct';
 import SliderImages from '../components/ProductIdPage/SliderImages';
+import '../components/ProductIdPage/styles/similarItems.css';
+import '../components/ProductIdPage/styles/productIdPage.css';
+import '../components/productPage/styles/infoProduct.css';
 
 const ProductIdPage = () => {
 
@@ -18,19 +21,25 @@ const ProductIdPage = () => {
   }, [param]);
     
   return (
-    <div>
-      <h2>idProduct</h2>
+    <div className='container__productId'>
+      <h2>{productId?.title}</h2>
       <SliderImages
         images={productId?.images}      
       />
 
-      <InfoProduct 
-        productId={productId}
-      />
-      <SimilarItems
-        categoryId={productId?.categoryId}
-        productId={param.id}
-      />
+      <div className='container__infoProduct'>
+        <InfoProduct 
+          productId={productId}
+        />
+      </div>
+
+      <div className='container_similarItems'>
+        <SimilarItems
+          categoryId={productId?.categoryId}
+          productId={param.id}
+        />
+      </div>
+      
 
     </div>
   )

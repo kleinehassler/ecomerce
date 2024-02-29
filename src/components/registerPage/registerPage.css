@@ -13,9 +13,15 @@
   form {
     display: flex;
     flex-direction: column;
-
+    justify-content: space-around;
+    padding: 10px 0 10px 0;
+    text-align: center;
   }
   
+.register__title {
+    text-align: center;
+  }
+
   label {
     margin-bottom: 5px;
     margin-left: 10px;
@@ -28,7 +34,7 @@
     margin-left: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
-    width: 90%;
+    width: 80vw;
   }
 
   

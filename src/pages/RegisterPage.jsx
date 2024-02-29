@@ -23,6 +23,7 @@ const RegisterPage = () => {
   return (
     <div>
       <form onSubmit={handleSubmit(submit)}>
+        <h2 className='register__title'>Register New Client of eCommmerce</h2>
         <div>
           <label htmlFor="name">Name</label>
           <input {...register('firstName')} id='name' type="text" />

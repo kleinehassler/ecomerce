@@ -1,0 +1,11 @@
+.container__productId{
+    /* background-color: aqua; */
+    
+}
+
+.container__infoProduct{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+}

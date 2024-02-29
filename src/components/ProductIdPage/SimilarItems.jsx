@@ -7,7 +7,7 @@ const SimilarItems = ({categoryId, prodId}) => {
 
     useEffect(() => {
         if (categoryId){
-            const url = 'https://e-commerce-api-v2.academlo.tech/api/v1/products?categoryId=${categoryId}';
+            const url = `https://e-commerce-api-v2.academlo.tech/api/v1/products?categoryId=${categoryId}`;
             setProductsByCategory(url);
         }
     }, [categoryId]);

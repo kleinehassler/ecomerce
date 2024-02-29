@@ -6,8 +6,8 @@ import CartProduct from '../components/cartPage/CartProduct';
 import useAuth from '../hooks/useAuth';
 import '../components/cartPage/styles/cartProduct.css';
 
+// const CartPage = ({ isCartModalOpen, closeCartModal }) => {
 const CartPage = () => {
-
   const [isModalOpen, setIsModalOpen] = useState(false);
   const cart = useSelector(store => store.cart);
   const dispatch = useDispatch();
@@ -33,13 +33,30 @@ const CartPage = () => {
     setIsModalOpen(true);
   }
 
-  const closeCartModal = () => {
+  const closeCartModal1 = () => {
     setIsModalOpen(false);
   }
 
  // console.log(cart)
   return (
     <div>
+      {/* <div className={isCartModalOpen ? "CartPageModal" : "CartPageHidden"}>
+        <div className="CartPageContainer">
+          {
+            cart?.map(prod => (
+              <CartProduct 
+                key={prod.id}
+                prod={prod}
+              />
+            ))
+          }
+          <div>
+            <h3> Total Buy: $ {handleTotals} </h3>
+            <button onClick={handleBuy}>Buy</button>
+          </div>
+          <button onClick={closeCartModal}>Close Cart</button>
+        </div>
+      </div> */}
       <button onClick={openCartModal}>Open Cart</button>
         {isModalOpen && (
           <div className="CartPageModal">
@@ -56,10 +73,10 @@ const CartPage = () => {
                 <h3> Total Buy: $ {handleTotals} </h3>
                 <button onClick={handleBuy}>Buy</button>
               </div>
-              <button onClick={closeCartModal}>Close Cart</button>
+              <button onClick={closeCartModal1}>Close Cart</button>
             </div>
             </div>
-        )}
+        )} 
     </div>
   )
 }

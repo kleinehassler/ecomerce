@@ -9,15 +9,25 @@ import CartPage from './pages/CartPage';
 import PurchasesPage from './pages/PurchasePage';
 import HeaderNav from './shared/HeaderNav';
 import ProtectedRoutes from './pages/ProtectedRoutes';
+import { useState } from 'react';
 
 
 
 function App() {
 
+  const [isCartModalOpen, setIsCartModalOpen] = useState(false);
+
+  const openCartModal = () => {
+    setIsCartModalOpen(true);
+  };
+
+  const closeCartModal = () => {
+    setIsCartModalOpen(false);
+  };
 
   return (
    <div>
-    <HeaderNav />
+    <HeaderNav openCartModal={openCartModal} />
     <Routes>
       <Route path='/' element={<HomePage/>}/>
       <Route path='/product/:id' element={<ProductIdPage/>}/>
@@ -28,6 +38,9 @@ function App() {
         <Route path='/purchases' element={<PurchasesPage/>}/>
       </Route>
     </Routes>
+    
+    {isCartModalOpen && <CartPageModal onClose={() => setIsCartModalOpen(false)} />}
+   
    </div>
   )
 }

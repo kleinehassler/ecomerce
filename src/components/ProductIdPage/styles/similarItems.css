@@ -1,0 +1,17 @@
+
+.container_similarItems{
+    display: flex;
+    flex-direction: row;
+}
+
+.productContainer {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.productCard{
+    margin: 10px;
+    padding: 5px;
+    
+}

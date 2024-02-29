@@ -30,7 +30,7 @@ const InfoProduct = ({productId}) => {
     }
 
   return (
-    <div>
+    <div className='container__infoproduct'>
         <div>
             <h2>{productId?.brand}</h2>
             <h3>{productId?.title}</h3>
@@ -43,12 +43,12 @@ const InfoProduct = ({productId}) => {
             </ul>
             <div>
                 <p>Quantity</p>
-                <button onClick={handleLess}>-</button>
+                <button onClick={handleLess}><ion-icon name="chevron-back-circle-sharp"></ion-icon></button>
                 <span>{quantity}</span>
-                <button onClick={handlePlus}>+</button>
+                <button onClick={handlePlus}><ion-icon name="chevron-forward-circle"></ion-icon></button>
             </div>
         </div>
-        <button>Add to Cart</button>
+        <button>Add to Cart <ion-icon name="cart-outline"></ion-icon></button>
     </div>
   )
 }

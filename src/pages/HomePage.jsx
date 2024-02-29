@@ -45,20 +45,23 @@ const [ fromValue, setFormValue ] = useState({
 
   return (
     <div>
-      <div className='FilterContainer'>
-        <button onClick={handleDark}>DarkMode</button>
-        <FormPrice 
-          setFormValue={setFormValue}
-        />
-        <div>
-          <h3>By Name</h3>
-          <input type="text" ref={textInput} onChange={handleSearch}/>
+      <div className='FilterContainer1'>
+        <div className='Filter__Container3'>
+          <button onClick={handleDark}>DarkMode</button>
+          <FormPrice 
+            setFormValue={setFormValue}
+          />
+          <div className='Filter__Container4'>
+            <div className='Filter__Container5'>
+              <h3>By Name</h3>
+              <input type="text" ref={textInput} onChange={handleSearch} className='input__search'/>
+            </div>
+            <SelectCategory
+              setSelectValue={setSelectValue}
+            />
+          </div>
         </div>
-        <SelectCategory
-          setSelectValue={setSelectValue}
-        />
-      </div>
-      <section className='products__container'>
+        <section className='products__container'>
         {
           products?.filter(cbFilter).map(prod => (
             <ProductCard 
@@ -68,6 +71,8 @@ const [ fromValue, setFormValue ] = useState({
           ))
         }
       </section>
+      </div>
+      
     </div>
   )
 }

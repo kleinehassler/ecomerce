@@ -39,7 +39,7 @@ const LoginPage = () => {
               </div>
               <button>Login</button>
             </form>
-            <p>If you are not registered then you can <Link to='/register'> register here</Link> </p>
+            <p>If you are not registered then you can <Link to='/register'><span className='register__link'>register here</span></Link> </p>
          </> :   
             <button onClick={handleLogout}>Logout</button>
       }
