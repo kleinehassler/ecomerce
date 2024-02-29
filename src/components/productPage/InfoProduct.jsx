@@ -18,7 +18,7 @@ const InfoProduct = ({productId}) => {
     }
     const handleAddToCart = () => {
         const item = cart.filter(prod => prod.product.id===productId.id);
-        if (item) {
+        if (item[0]) {
             dispatch(updateCartThunk(...item, quantity));
         } else {
            dispatch(postCartThunk({

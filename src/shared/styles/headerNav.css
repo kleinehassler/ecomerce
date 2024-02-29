@@ -1,3 +1,4 @@
+/*
 .headerNav {
     display: flex;
     justify-content: space-between;
@@ -11,3 +12,49 @@
     flex-wrap: wrap;
     
 }
+
+ headerNav.css */
+
+.headerNav {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .headerNav h1 {
+    margin: 0;
+  }
+  
+  .headerNav h1 a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .headerNav nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .headerNav nav ul li {
+    margin-right: 20px;
+  }
+  
+  .headerNav nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  .headerNav nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .headerNav nav ul li a:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import SimilarItems from '../components/ProductIdPage/SimilarItems';
@@ -9,6 +10,8 @@ const ProductIdPage = () => {
 
   const [ productId, getProductId ] = useFetch();
   const param = useParams();
+
+ // console.log(typeof(param.id));
   useEffect(() => {
     const url = `https://e-commerce-api-v2.academlo.tech/api/v1/products/${param.id}`;
     getProductId(url);
