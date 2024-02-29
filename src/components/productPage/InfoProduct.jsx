@@ -43,12 +43,12 @@ const InfoProduct = ({productId}) => {
             </ul>
             <div>
                 <p>Quantity</p>
-                <button onClick={handleLess}><ion-icon name="chevron-back-circle-sharp"></ion-icon></button>
+                <button onClick={handleLess}><box-icon type='solid' name='minus-square'></box-icon></button>
                 <span>{quantity}</span>
-                <button onClick={handlePlus}><ion-icon name="chevron-forward-circle"></ion-icon></button>
+                <button onClick={handlePlus}><box-icon type='solid' name='plus-square'></box-icon></button>
             </div>
         </div>
-        <button>Add to Cart <ion-icon name="cart-outline"></ion-icon></button>
+        <button>Add to Cart <box-icon name='cart-download'></box-icon></button>
     </div>
   )
 }

@@ -26,11 +26,11 @@ const LoginPage = () => {
   }
 
   return (
-    <div>
+    <div className='LoginPageContainer'>
       {
          isLogin ? 
          <>
-            <form onSubmit={handleSubmit(submit)}>
+            <form onSubmit={handleSubmit(submit)} className='form__login'>
               <div className='login__inputs'>
                 <label htmlFor="user">Email: </label>
                 <input {...register('email')} id='user' type="email" />
